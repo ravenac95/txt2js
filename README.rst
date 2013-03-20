@@ -14,10 +14,10 @@ Here's a simple example::
     var util = require('util');
     
     exports.output = function(string, relPath, fileName) {
-      var output = '';
-      output += util.format('files[%s] = %s;', relPath, string);
+      var output = util.format('files["%s"] = %s;', relPath, string);
       return output;
     }
 
 This would add any file into the object ``files`` using the relPath as it's
-key.
+key. The generated files will be the in the format of 
+``{{ originalFilename }}.js``.

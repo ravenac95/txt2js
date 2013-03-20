@@ -1,7 +1,7 @@
 {
   "name": "txt2js",
   "description": "txt2js convert plain text files into javascript strings",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "commander": "*",
     "underscore": "*",
