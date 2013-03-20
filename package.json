@@ -1,0 +1,26 @@
+{
+  "name": "txt2js",
+  "description": "txt2js convert plain text files into javascript strings",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "commander": "*",
+    "underscore": "*",
+    "underscore.string": "*"
+  },
+  "keywords": [
+    "txt2js",
+    "html",
+    "text",
+    "convert"
+  ],
+  "author": "Reuven V. Gonzales <reuven@virtru.com>",
+  "preferGlobal": true,
+  "bin": {
+    "txt2js": "./bin/txt2js"
+  },
+  "engines": {
+    "node": ">= 0.8.22",
+    "npm": "1.1.x"
+  }
+}
