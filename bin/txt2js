@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+var path = require('path');
+var _ = require('underscore');
+var program = require('commander');
+var transform = require('../lib/transform');
+
+function list(val) {
+  return val.split(',')
+}
+
+program
+  .version('0.0.1')
+  .usage('[options] <start-directory>')
+  .option('-e, --extensions <extensions>', 'Specify extensions to tranform', list)
+  .option('-m, --as-module-export', 'Shortcut to export all files as module.export')
+  .parse(process.argv)
+
+var directories = _.map(program.args, function(directory) {
+  return path.resolve(directory);
+});
+
+if(directories) {
+  var asModuleExport = program.asModuleExport;
+  if(asModuleExport) {
+    transform.transformDirectories('asModuleExport', program.args, program.extensions);
+  } else {
+    transform.processDirectories(program.args, program.extensions);
+  }
+}
