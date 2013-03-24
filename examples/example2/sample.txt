@@ -1,0 +1,5 @@
+This is a test file
+That will be turned into a javascript string
+
+
+It should preserve all of the new lines and whitespaces             
